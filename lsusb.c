@@ -3667,11 +3667,12 @@ static int list_devices(libusb_context *ctx, int busnum, int devnum, int vendori
 
 		if (verblevel > 0)
 			printf("\n");
-		printf("Bus %03u Device %03u: ID %04x:%04x %s %s\n",
+		printf("Bus %03u Device %03u: ID %04x:%04x \"%s\" \"%s\"\n",
 				bnum, dnum,
 				desc.idVendor,
 				desc.idProduct,
 				vendor, product);
+
 		if (verblevel > 0)
 			dumpdev(dev);
 	}
