@@ -649,7 +649,7 @@ static void dump_pipe_desc(const unsigned char *buf)
 		[0xE0 ... 0xEF] = "Vendor specific",
 		[0xF0 ... 0xFF] = "Reserved",
 	};
-	
+
 	if (buf[0] == 4 && buf[1] == 0x24) {
 		printf("        %s (0x%02x)\n", pipe_name[buf[2]], buf[2]);
 	} else {
@@ -3910,7 +3910,7 @@ static int list_devices(libusb_context *ctx, int busnum, int devnum, int vendori
 				desc.idVendor, desc.idProduct);
 		if (verblevel > 0)
 			printf("\n");
-		printf("Bus %03u Device %03u: ID %04x:%04x %s %s\n",
+    printf("Bus %03u Device %03u: ID %04x:%04x \{%s\} {%s}\n",
 				bnum, dnum,
 				desc.idVendor,
 				desc.idProduct,
